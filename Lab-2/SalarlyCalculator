@@ -1,0 +1,13 @@
+public class SalaryCalculator {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("How much are you paid per hour? ");
+        String hourly = input.nextLine();
+        int value = Integer.parseInt(hourly);
+        int x =  value * 40 * 52; 
+                
+        System.out.println("If you work 40 hours/week for all 52 weeks this year you will earn " + x + " this year.");
+      
+    }
+}
