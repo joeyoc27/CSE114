@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class TextReplacer {
+     public static void main(String[] args) {
+        StringBuffer text = 
+                new StringBuffer("The quick brown fox jumped over the lazy dog.");
+        System.out.println(text);
+        //Scanner
+        Scanner input = new Scanner(System.in);
+        //Prompt text to replace
+        System.out.print("What text would you like to replace? "); 
+        String r = input.nextLine();
+        int a = text.indexOf(r);
+        int b = r.length();
+        int c = a + b;
+        //prompt new text
+        System.out.print("What is the new text? ");
+        String i = input.nextLine();
+        //replace
+        text = text.replace(a, c, i);
+        System.out.println(text);
+     }   
+}
