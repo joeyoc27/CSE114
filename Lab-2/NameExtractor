@@ -1,0 +1,15 @@
+package Lab2Package;
+import java.util.Scanner; 
+
+public class NameExtractor {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your name (Last, First): ");
+        String name = input.nextLine();
+        int k = name.indexOf(",");
+        String lastName = name.substring(0, k);
+        String firstName = name.substring(k + 1);
+        System.out.println("Hello" + firstName + " " + lastName);
+    }
+    
+}
