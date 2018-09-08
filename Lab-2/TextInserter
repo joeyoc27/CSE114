@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class TextInserter {
+
+    public static void main(String[] args) {
+        StringBuffer text
+                = new StringBuffer("The quick brown fox jumped over the lazy dog.");
+        System.out.println(text);
+        //Prompt user to choose text to insert
+        Scanner input = new Scanner(System.in);
+        System.out.println("What text would you like to insert? ");
+        String a = input.nextLine();
+        //Prompt user to choose where to insert chosen text
+        System.out.println("Where would you like to insert your text?");
+        String b = input.nextLine();
+        int x = Integer.parseInt(b);
+        text.insert(x, a);
+        System.out.println(text);
+        
+    }
+}
