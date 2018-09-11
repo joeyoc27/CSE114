@@ -1,0 +1,39 @@
+package Lab3;
+import java.time.LocalDateTime;
+
+public class DateTimePrinter {
+    public static void main(String[] args) {
+        System.out.println("*** DateTimePrinter***");
+        LocalDateTime now = LocalDateTime.now();
+        //Split up into components
+        long month = now.getMonthValue();
+        long day = now.getDayOfMonth();
+        long year = now.getYear();
+        long hour = now.getHour();
+        long minute = now.getMinute();
+        long second = now.getSecond();
+        long nanosecond = now.getNano();
+        //No Indent for Odd Numbers
+       if ((second%2)!=0) {
+        System.out.println("Current Month: " + month);
+        System.out.println("Current Day: " + day);
+        System.out.println("Current Year: " + year);
+        System.out.println("Current Hour: " + hour);
+        System.out.println("Current Minute: " + minute);
+        System.out.println("Current Second: " + second);
+        System.out.println("Current Nanosecond: " + nanosecond);
+        System.out.println("Current Combined Second: " + second + "." + nanosecond);
+       }
+       //Indent for Even Numbers
+       else {
+        System.out.println("\tCurrent Month: " + month);
+        System.out.println("\tCurrent Day: " + day);
+        System.out.println("\tCurrent Year: " + year);
+        System.out.println("\tCurrent Hour: " + hour);
+        System.out.println("\tCurrent Minute: " + minute);
+        System.out.println("\tCurrent Second: " + second);
+        System.out.println("\tCurrent Nanosecond: " + nanosecond);
+        System.out.println("\tCurrent Combined Second: " + second + "." + nanosecond);
+       }
+    }  
+}
