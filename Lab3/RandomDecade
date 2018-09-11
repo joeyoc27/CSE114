@@ -1,0 +1,27 @@
+
+package Lab3;
+
+public class RandomDecade {
+    public static void main(String[] args) {
+        System.out.println("*** Random Decade ***");
+        //print out a random year and call it randomyear
+        double randomnumber = Math.random();
+        double randomyear1 = ((randomnumber * 10) + 1945);
+        int randomyear = (int)Math.rint(randomyear1);
+        System.out.println("My Randomly Generated Year of Birth: " + randomyear);
+
+    if ((randomyear >= 1945) && (randomyear < 1965)) {
+    System.out.println("Groovy");
+} 
+    if ((randomyear >= 1965) && (randomyear < 1982)) {
+    System.out.println("Whatever, this game is stupid.");
+}
+    if ((randomyear >= 1982) && (randomyear < 2010)) {
+    System.out.println("Who am I? What am I?");
+}
+    if ((randomyear >= 2010) && (randomyear <= 2018)) {
+    System.out.println("How am I even using a computer?");
+}
+            
+    }
+}
